@@ -1,0 +1,4 @@
+# Standard ansible inventory file
+
+[gameservers]
+# List of IP addresses/domain names for the gameservers

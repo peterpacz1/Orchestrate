@@ -1,3 +1,8 @@
 ---
 # Begin variables list
-swapfile_size: 4
+
+# Swap configuration variables
+swapfile_size_GB: 4
+swapfile_path: /swapfile
+swapiness_value: 30
+swap_cache_pressure: 50

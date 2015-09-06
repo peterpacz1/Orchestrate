@@ -4,6 +4,8 @@
 - name: "Install ufw (Uncomplicated FireWall) to use the ufw module"
   apt: pkg=ufw state=installed
 
+- name: "Resets UFW firewall configuration to blank slate"
+  uwf: state=reset
 - name: Sets sane default of denying all incoming traffic
   ufw: direction=incoming policy=deny
 

@@ -1,2 +1,3 @@
 ---
 # Begin list of tasks
+- include: firewall.yml

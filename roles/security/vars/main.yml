@@ -1,2 +1,5 @@
 ---
 # Begin list of vars
+
+# SSH configuration
+ssh_port: 22

@@ -1,0 +1,17 @@
+---
+# Begin list of tasks
+
+- name: "Install ufw (Uncomplicated FireWall) to use the ufw module"
+  apt: pkg=ufw state=installed
+
+- name: Sets sane default of denying all incoming traffic
+  ufw: direction=incoming policy=deny
+
+- name: Sets sane default of allowing all outgoing traffic
+  ufw: direction=outgoing policy=allow
+
+- name: "Allows incoming SSH connections at {{ ssh_port }}"
+  ufw: "rule=limit port={{ ssh_port }} proto=tcp"
+
+- name: Activates UFW
+  ufw: state=enabled

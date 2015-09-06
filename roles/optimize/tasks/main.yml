@@ -1,0 +1,4 @@
+---
+# Begin list of tasks
+- include: swap.yml
+- include: ntp.yml

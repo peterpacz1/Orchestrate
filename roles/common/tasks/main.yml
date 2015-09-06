@@ -1,7 +1,8 @@
 ---
 # Begin lists of tasks
+
+# The same as apt-get update && apt-get upgrade
 - name: Update server software
-  # Note to self: Ansible mappings do not have spaces (etc foo=bar)
   apt: update_cache=yes upgrade=dist
 
   # Installs multiple packages at the same time

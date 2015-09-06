@@ -1,0 +1,18 @@
+---
+# Begin list of tasks
+
+# References variables definied in roles/optimize/vars/main.yml
+- name: Creates an "{{ swapfile_size }} GB swapfile"
+  command: "fallocate -l {{ swapfile_size }}G /swapfile"
+
+- name: Changes the permissions on newly created swapfile
+  file: path=/swapfile mode=600
+
+- name: Sets the swap headers
+  command: mkswap /swapfile
+
+- name: Adds the swapfile on to the system
+  command: swapon /swapfile
+
+- name: Edits swapfile to make it permanent
+  mount: name=none src=/mnt/4GB.swap fstype=swap opts=sw passno=0 dump=0 state=present

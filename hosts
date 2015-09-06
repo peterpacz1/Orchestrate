@@ -1,4 +1,5 @@
-# Standard ansible inventory file
+# Standard Ansible inventory file
 
-[gameservers]
-# List of IP addresses/domain names for the gameservers
+[deployment_local]
+# Test deployment targets on local machine
+127.0.0.1:3022

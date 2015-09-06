@@ -1,0 +1,11 @@
+---
+# Highest level ansible playbook file.
+# Note to self: Ansible playbooks use YAML, which is organized like lists.
+- name: Main Orchestrate Ansible Playbook
+  hosts: deployment_local
+  remote_user: peterpacz1
+
+# Uses roles (playbooks inside the role/common)
+  roles:
+   - common
+   

@@ -1,0 +1,12 @@
+---
+# Begin lists of tasks
+- name: Update server software
+  # Note to self: Ansible mappings do not have spaces (etc foo=bar)
+  apt: update_cache=yes upgrade=dist
+
+  # Installs multiple packages at the same time
+- name: Install dependencies
+  apt: pkg={{item}} state=installed
+  with_items:
+    - screen
+    - git

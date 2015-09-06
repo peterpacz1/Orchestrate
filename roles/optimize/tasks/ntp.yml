@@ -1,2 +1,6 @@
 ---
 # Begin list of tasks
+
+- name: Install NTP in order to sychronize server clock time
+  apt: pkg=ntp state=installed
+  

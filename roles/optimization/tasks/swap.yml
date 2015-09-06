@@ -3,16 +3,16 @@
 
 # References variables definied in roles/optimize/vars/main.yml
 - name: "Creates an {{ swapfile_size_GB }} GB swapfile"
-  command: "fallocate -l {{ swapfile_size_GB }}G {{ swapfile_path }}" "creates={{ swapfile_path }}"
+  command: "fallocate -l {{ swapfile_size_GB }}G {{ swapfile_path }} creates={{ swapfile_path }}"
 
 - name: Changes the permissions on newly created swapfile
   file: "path={{ swapfile_path }} mode=600"
 
 - name: Sets the swap headers
-  command: mkswap {{ swapfile_path }}
+  command: "mkswap {{ swapfile_path }} creates={{ swapfile_path }}"
 
 - name: Adds the swapfile on to the system
-  command: swapon {{ swapfile_path }}
+  command: "swapon {{ swapfile_path }} creates={{ swapfile_path }}"
 
 - name: Permanently activates swapfile by mounting it to /etc/fstab
   mount: "name=none src={{ swapfile_path }} fstype=swap opts=sw passno=0 dump=0 state=present"

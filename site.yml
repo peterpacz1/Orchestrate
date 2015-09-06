@@ -11,4 +11,6 @@
    # Installs the most basic of dependencies
    - common
    # Adds swap, and conducts various subtle optimizations
-   - optimize
+   - optimization
+   # Configures IPtables, SSH daemon, and rkhunter
+   - security 

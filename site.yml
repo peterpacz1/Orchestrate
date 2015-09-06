@@ -13,4 +13,4 @@
    # Adds swap, and conducts various subtle optimizations
    - optimization
    # Configures IPtables, SSH daemon, and rkhunter
-   - security 
+   - security

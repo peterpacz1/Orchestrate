@@ -3,7 +3,7 @@
 
 # References variables definied in roles/optimize/vars/main.yml
 - name: "Creates an {{ swapfile_size_GB }} GB swapfile"
-  command: "fallocate -l {{ swapfile_size_GB }}G {{ swapfile_path }}"
+  command: "fallocate -l {{ swapfile_size_GB }}G {{ swapfile_path }}" "creates={{ swapfile_path }}"
 
 - name: Changes the permissions on newly created swapfile
   file: "path={{ swapfile_path }} mode=600"

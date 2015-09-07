@@ -1,5 +1,8 @@
 ---
 # Begin list of vars
 
-# SSH configuration
+# SSH configuration (used in templates/sshd_config.j2)
 ssh_port: 22
+ssh_PermitRootLogin: no
+ssh_PasswordAuthentication: no
+ssh_AllowGroups: sudo

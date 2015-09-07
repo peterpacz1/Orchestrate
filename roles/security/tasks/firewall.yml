@@ -5,7 +5,7 @@
   apt: pkg=ufw state=installed
 
 - name: "Resets UFW firewall configuration to blank slate"
-  uwf: state=reset
+  ufw: state=reset
 - name: Sets sane default of denying all incoming traffic
   ufw: direction=incoming policy=deny
 

@@ -1,2 +1,4 @@
 # Standard Ansible inventory file
 # Add your server IP addresses here!
+
+127.0.0.1:3022

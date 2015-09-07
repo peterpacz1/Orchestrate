@@ -1,5 +1,2 @@
 # Standard Ansible inventory file
-
-[deployment_local]
-# Test deployment targets on local machine
-127.0.0.1:3022
+# Add your server IP addresses here!

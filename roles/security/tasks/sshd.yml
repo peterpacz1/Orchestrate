@@ -1,2 +1,7 @@
 ---
 # Begin list of tasks
+
+- name: Push hardened SSH configuration from templates
+  template: "src=sshd_config.j2 dest={{ ssh_sshd_config_location }}"
+  notify:
+    - restart ssh

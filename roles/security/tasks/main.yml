@@ -3,3 +3,4 @@
 - include: firewall.yml
 - include: sshd.yml
 - include: banner.yml
+- include: fail2ban.yml

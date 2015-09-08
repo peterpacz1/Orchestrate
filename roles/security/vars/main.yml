@@ -9,3 +9,9 @@ ssh_sshd_config_location: /etc/ssh/sshd_config
 ssh_PermitRootLogin: "no"
 ssh_PasswordAuthentication: "no"
 ssh_AllowGroups: sudo
+
+# Fail2ban settings
+fail2ban_config_location: /etc/fail2ban/jail.local
+fail2ban_bantime: 3600
+fail2ban_destemail: root@localhost
+fail2ban_ssh_maxretry: 4

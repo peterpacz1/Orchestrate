@@ -5,6 +5,6 @@
   apt: pkg=fail2ban state=installed
 
 - name: Copy fail2ban configuration file on to server
-  template: "src=jail.local.j2 dest={{ fail2ban_config_location }}" "
+  template: "src=jail.local.j2 dest={{ fail2ban_config_location }}"
   notify:
     - restart fail2ban

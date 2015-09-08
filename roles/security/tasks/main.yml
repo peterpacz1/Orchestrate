@@ -2,3 +2,4 @@
 # Begin list of tasks
 - include: firewall.yml
 - include: sshd.yml
+- include: banner.yml

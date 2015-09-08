@@ -1,0 +1,4 @@
+---
+
+- name: Create SSH banner file
+  template: src=banner.j2 dest=/etc/issue.net mode=0600

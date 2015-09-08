@@ -3,7 +3,7 @@
 
 # The same as apt-get update && apt-get upgrade
 - name: Update server software
-  apt: update_cache=yes upgrade=dist
+  apt: update_cache=yes #upgrade=dist
 
   # Installs multiple packages at the same time
 - name: Install dependencies

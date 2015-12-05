@@ -1,0 +1,4 @@
+---
+
+- name: Download RKHunter from source
+  get_url: url="http://downloads.sourceforge.net/project/rkhunter/rkhunter/1.4.2/rkhunter-1.4.2.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Frkhunter%2Ffiles%2F&ts=1441709534&use_mirror=kent" dest=/tmp/rkhunter-1.4.2.tar.gz
